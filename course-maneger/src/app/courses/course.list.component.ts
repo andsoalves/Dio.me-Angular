@@ -38,6 +38,16 @@ export class CouseListComponent implements OnInit {
         })
     }
 
+    deleteById(courseId:number): void {
+        this.courseService.deleteById(courseId).subscribe({
+            next: () => { 
+                console.log('delete with success');
+                this.retrieveAll();
+            },
+            error: err => console.log('Error',err)
+        })
+    }
+
     set filter(value: string) {
         this._filterby = value;
         this.filteredCourses = this._courses.filter((course: Course) => course.name.toLocaleLowerCase().indexOf(this._filterby.toLocaleLowerCase()) >-1 ); 

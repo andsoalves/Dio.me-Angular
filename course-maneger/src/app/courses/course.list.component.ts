@@ -11,7 +11,7 @@ import { CourseService } from "./course.service";
 //criei uma Class para para adicionar um array com as propriedes pre definidas no meu objeto course.ts
 //desta forma posso exportar para o component.html atravez de {{course.'propriedade'}}   
 
-export class CouseListComponent implements OnInit {
+export class CourseListComponent implements OnInit {
 
     filteredCourses: Course [] = []
     
